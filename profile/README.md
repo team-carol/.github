@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://maimai.bitworkspace.kr"><img src="https://img.shields.io/badge/carol_서버-9333EA?style=flat-square&logo=discord&logoColor=white" alt="carol 서버"></a>
   <a href="https://maimai.bitworkspace.kr/invite"><img src="https://img.shields.io/badge/봇_초대-5865F2?style=flat-square&logo=discord&logoColor=white" alt="봇 초대"></a>
+  <a href="https://maimai.bitworkspace.kr"><img src="https://img.shields.io/badge/maimai.bitworkspace.kr-9333EA?style=flat-square&logo=googlechrome&logoColor=white" alt="웹"></a>
   <a href="https://github.com/orgs/team-carol/discussions"><img src="https://img.shields.io/badge/Discussions-24292F?style=flat-square&logo=github&logoColor=white" alt="Discussions"></a>
 </p>
 
