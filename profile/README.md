@@ -2,7 +2,8 @@
   team-carol 조직 프로필 (https://github.com/team-carol)
   디자인 출처: team-carol/carol → docs/DESIGN.md + src/web/*
   팔레트: canvas #0d0d0d · surface #1a1a1a · border #252525 · accent #9333ea / #c084fc
-  GitHub README 는 <style>·웹폰트가 막혀서 아이덴티티를 assets/*.svg 로 렌더링합니다.
+  assets/*.svg 는 satori(Pretendard + JetBrains Mono)로 렌더 → 글리프가 모두
+  <path> 로 아웃라인되어 폰트 의존성이 없습니다. 재생성: scripts/gen-assets.js
 -->
 
 <p align="center">
