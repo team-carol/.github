@@ -4,8 +4,8 @@
 
 보안 취약점은 **공개 이슈로 올리지 말아주세요.**
 
-- 이메일: **{{SECURITY_EMAIL}}**
-- 또는 각 레포의 **Security → Report a vulnerability** (GitHub Private Vulnerability Reporting)
+- 각 레포의 **Security → Report a vulnerability** (GitHub Private Vulnerability Reporting)
+- 또는 조직 관리자에게 비공개로 연락 (연락처는 조직에 맞게 채워주세요)
 
 제보에 포함해주시면 좋은 것:
 
