@@ -1,11 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="team-carol">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" fill="none" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="1" stop-color="#161b22"/>
+    <radialGradient id="glow" cx="84%" cy="6%" r="62%">
+      <stop offset="0" stop-color="#9333ea" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9333ea"/>
+      <stop offset="1" stop-color="#c084fc"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="320" fill="url(#bg)"/>
-  <text x="64" y="170" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="72" font-weight="700" fill="#e6edf3">team-carol</text>
-  <text x="66" y="220" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="26" fill="#8b949e">maimai DX NET을 더 편하게 — Discord 봇과 브라우저 확장</text>
+  <rect x="1" y="1" width="1278" height="358" rx="20" fill="#0d0d0d" stroke="#252525"/>
+  <rect x="1" y="1" width="1278" height="358" rx="20" fill="url(#glow)"/>
+  <rect x="64" y="58" width="52" height="4" rx="2" fill="url(#accent)"/>
+  <text x="64" y="96" font-family="'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" letter-spacing="4" fill="#888888">TEAM · CAROL</text>
+  <text x="60" y="196" font-size="92" font-weight="800" letter-spacing="-2" fill="#ffffff"><tspan fill="#5c5c5c">team-</tspan>carol</text>
+  <text x="64" y="244" font-size="22" fill="#aaaaaa">maimai DX NET을 Discord와 브라우저에서 — 봇 · 확장 · 이슈 triage</text>
+  <g font-size="13" font-weight="600">
+    <rect x="64" y="280" width="132" height="34" rx="8" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="130" y="302" text-anchor="middle" fill="#cccccc">Discord Bot</text>
+    <rect x="208" y="280" width="168" height="34" rx="8" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="292" y="302" text-anchor="middle" fill="#cccccc">Chrome Extension</text>
+    <rect x="388" y="280" width="132" height="34" rx="8" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="454" y="302" text-anchor="middle" fill="#cccccc">Issue Triage</text>
+  </g>
 </svg>
