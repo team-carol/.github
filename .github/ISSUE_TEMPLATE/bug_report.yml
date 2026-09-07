@@ -1,0 +1,40 @@
+name: 🐛 버그 리포트
+description: 예상과 다르게 동작하는 문제를 알려주세요
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        제보 전에 기존 이슈에 같은 내용이 있는지 검색해 주세요.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 무슨 일이 있었나요?
+      description: 관찰된 동작과 기대한 동작을 함께 적어주세요.
+      placeholder: "~를 했더니 ~가 발생했습니다. 원래는 ~가 되어야 합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 재현 절차
+      description: 최소한의 재현 단계
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 버전 / 환경
+      placeholder: "예: v1.4.2, macOS 14, Node 20"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그 / 스크린샷
+      description: 관련 로그를 붙여주세요. 자동으로 코드 블록 처리됩니다.
+      render: shell
