@@ -30,6 +30,13 @@ if (prev === next) {
   console.log(`profile/README.md 최신 (프로젝트 ${rows.length}개)`);
 } else if (check) {
   console.error("profile/README.md 가 낡았습니다. `npm run build` 후 커밋하세요.");
+  const a = prev.split("\n");
+  const b = next.split("\n");
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    if (a[i] === b[i]) continue;
+    if (a[i] !== undefined) console.error(`- ${a[i]}`);
+    if (b[i] !== undefined) console.error(`+ ${b[i]}`);
+  }
   process.exitCode = 1;
 } else {
   await writeFile(OUT, next);
