@@ -56,10 +56,12 @@ export function projectRows(
 function projectsTable(rows: ProjectRow[]): string {
   const lines = ["| 프로젝트 | 설명 | 스택 |", "| --- | --- | --- |"];
   for (const { repo, description, stack } of rows) {
-    const site = repo.homepage ? ` · [사이트](${repo.homepage})` : "";
-    lines.push(
-      `| [**${repo.name}**](${repo.url})${site} | ${cell(description) || "—"} | ${cell(stack.join(" · ")) || "—"} |`,
-    );
+    // 사이트 링크는 이름 칸을 넓히지 않도록 설명 끝에, 도메인을 글자로 드러내서 붙인다.
+    const site = repo.homepage
+      ? `[${repo.homepage.replace(/^https?:\/\//, "").replace(/\/$/, "")}](${repo.homepage})`
+      : "";
+    const desc = [cell(description), site].filter(Boolean).join(" — ");
+    lines.push(`| [**${repo.name}**](${repo.url}) | ${desc || "—"} | ${cell(stack.join(" · ")) || "—"} |`);
   }
   return lines.join("\n");
 }
