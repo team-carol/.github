@@ -29,7 +29,7 @@ SEGA 계정 정보를 받지 않고, 사용자가 이미 로그인해 둔 브라
 | --- | --- | --- |
 | [**carol**](https://github.com/team-carol/carol) | maimai DX NET 프로필 확인 Discord 봇. 북마클릿 동기화, `satori` + `resvg` PNG 렌더, 타 게임 레이팅 치환, 일일 성과(`/성과`) | TypeScript · Node.js · discord.js · PostgreSQL |
 | [**carol-extension**](https://github.com/team-carol/carol-extension) | maimaiDX NET을 한국어로 보고 곡을 별명으로 찾는 크롬 확장. 번역 사전 418 · 곡명 817 · 별명 3,486. 선택적 carol 프로필 동기화 | TypeScript · WXT · MV3 |
-| [**carol-keyring**](https://github.com/team-carol/carol-keyring) | maimai 프로필을 보여 주는 전자잉크 키링. 펌웨어와, BLE로 화면을 보내는 웹 앱 | TypeScript · React · C++ · PlatformIO · BLE |
+| [**carol-keyring**](https://github.com/team-carol/carol-keyring) · [사이트](https://keyring.team-carol.com/) | maimai 프로필을 보여 주는 전자잉크 키링. 펌웨어와, BLE로 화면을 보내는 웹 앱 | TypeScript · React · C++ · PlatformIO · BLE |
 | [**carol-web**](https://github.com/team-carol/carol-web) · [사이트](https://www.team-carol.com/) | 캐롤봇 랜딩 페이지. 노션 DB의 트윗 링크로 패치노트 자동 생성, ko / en / ja 다국어 | Next.js 16 · Tailwind CSS v4 |
 | [**carol-design-system**](https://github.com/team-carol/carol-design-system) · [사이트](https://design-system.team-carol.com/) | team carol 공용 디자인 시스템. 색·타이포그래피 토큰, CSS, React 컴포넌트를 `@team-carol/design-system` 패키지로 배포 | TypeScript · React · CSS · tsup |
 | [**carol-issue**](https://github.com/team-carol/carol-issue) | Discord 제보를 받아 AI로 GitHub Issue 초안을 만들고 GitHub App으로 발행하는 triage 서비스. carol 본체와 HTTP API로 분리 | TypeScript · OpenAPI / Scalar |
