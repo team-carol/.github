@@ -1,0 +1,21 @@
+{
+  "name": "team-carol-profile",
+  "private": true,
+  "type": "module",
+  "description": "team-carol 조직 프로필(profile/README.md) 생성기",
+  "scripts": {
+    "build": "node src/profile/build.ts",
+    "check": "node src/profile/build.ts --check",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@team-carol/design-system": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

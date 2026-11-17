@@ -1,0 +1,66 @@
+name: profile
+
+# profile/README.md 를 공개 레포 목록에 맞춰 다시 만든다.
+# - PR: 타입 검사 + 커밋된 README 가 최신인지 확인만
+# - main 푸시 · 매일 · 수동: 다시 만들고, 달라졌을 때만 커밋
+
+on:
+  pull_request:
+    paths: ["src/**", "profile/**", "package*.json", "tsconfig.json", ".github/workflows/profile.yml"]
+  push:
+    branches: [main]
+    paths: ["src/**", "package*.json", "tsconfig.json", ".github/workflows/profile.yml"]
+  schedule:
+    - cron: "17 21 * * *" # 매일 06:17 KST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- profile/README.md; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git commit -m "Regenerate profile README"
+          git push
